@@ -9,14 +9,16 @@ const __dirname = path.resolve();
 // Configuración de middlewares
 export const configureMiddlewares = (app) => {
     // CORS
-    app.use(
-        cors({
-            origin: ["http://localhost:5500", "http://localhost:3000"],
-            methods: ["GET", "POST", "PUT", "DELETE"],
-            credentials: true,
-        })
-    );
-
+    // app.use(
+    //     cors({
+    //         origin: ["http://localhost:3000"],
+    //         methods: ["GET", "POST", "PUT", "DELETE"],
+    //         credentials: true,
+    //     })
+    // );
+    app.use(cors({
+        origin:["http://localhost:3000"]
+    }))
     // Morgan
     app.use(morgan("dev"));
 

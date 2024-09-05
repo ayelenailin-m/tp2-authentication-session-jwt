@@ -64,7 +64,7 @@
                     },
                     body: JSON.stringify({ username, password })
                 })
-                
+                console.log(response);
                 if(!response.ok) {
                     divError.innerText = 'Credenciales inválidas';
                     divError.classList.add('bg-danger', 'text-white', 'text-center', 'rounded', 'p-2', 'mt-3');
