@@ -1,7 +1,6 @@
 import { createPool } from "mysql2/promise";
 import { DB_HOST, DB_NAME, DB_PASSWORD, DB_USER } from "../config/config.js";
 
- // Evitamos inicializar directamente
 
 export const createMyPool = () => {
     try {
@@ -23,5 +22,4 @@ export const createMyPool = () => {
 };
 const conn = createMyPool()
 
-//Exportamos pool inicializado, y no antes de haberlo creado
 export { conn };
