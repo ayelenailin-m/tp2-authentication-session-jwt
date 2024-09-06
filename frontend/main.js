@@ -9,7 +9,8 @@
 
     if (response.ok) {
         const data = await response.json();
-        document.getElementById('user-name').innerText = data.user.username;
+        console.log(data);
+        document.getElementById('user-name').innerText = data.user[0][0].username;
     } else {
         // Redirigir al usuario a la página de inicio de sesión
         window.location.href = 'index.html';
